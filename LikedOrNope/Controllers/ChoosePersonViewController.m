@@ -236,44 +236,44 @@ static NSMutableArray *UIImageArray;
     }
 
     return @[
-        [[Person alloc] initWithName:[productNames objectAtIndex:0]
+        [[Person alloc] initWithName:[[productNames objectAtIndex:0] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:0]
-                                age:[pricingArray objectAtIndex:1]],
-        [[Person alloc] initWithName:@"Jake"
+                                age:4],
+        [[Person alloc] initWithName:[[productNames objectAtIndex:1] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:1]
-                                age:[pricingArray objectAtIndex:1]
+                                age:5
                ],
-        [[Person alloc] initWithName:@"Fiona"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:2] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:2]
-                                age:[pricingArray objectAtIndex:2]
+                                age:2
                ],
-        [[Person alloc] initWithName:@"P. Gumball"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:3] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:3]
-                                age:[pricingArray objectAtIndex:3]
+                                age:22
                ],
-        [[Person alloc] initWithName:@"Finn"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:4] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:4]
-                                age:[pricingArray objectAtIndex:4]
+                                age:11
                ],
-        [[Person alloc] initWithName:@"Jake"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:5] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:5]
-                                age:[pricingArray objectAtIndex:5]
+                                age:5
                ],
-        [[Person alloc] initWithName:@"Fiona"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:6] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:6]
-                                age:[pricingArray objectAtIndex:6]
+                                age:3
                ],
-        [[Person alloc] initWithName:@"P. Gumball"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:7] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:7]
-                                age:[pricingArray objectAtIndex:7]
+                                age:10
                ],
-        [[Person alloc] initWithName:@"Finn"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:8] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:8]
-                                age:[pricingArray objectAtIndex:8]
+                                age:42
                ],
-        [[Person alloc] initWithName:@"Jake"
+        [[Person alloc] initWithName:[[productNames objectAtIndex:9] substringToIndex:10]
                                 image:[UIImageArray objectAtIndex:9]
-                                age:[pricingArray objectAtIndex:9]
+                                age:9
                ],
     ];
 }
