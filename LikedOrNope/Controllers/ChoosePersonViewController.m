@@ -28,6 +28,7 @@
 #import "ProfileViewController.h"
 #import "CategoryViewController.h"
 //#import "GlobalVars.m"
+#import "TrendViewController.h"
 
 static const CGFloat ChoosePersonButtonHorizontalPadding = 80.f;
 static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
@@ -64,7 +65,7 @@ static NSMutableArray *UIImageArray;
     self.navigationController.navigationBarHidden = true;
     
     UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Profile"
+                                   initWithTitle:@"Trending"
                                    style:UIBarButtonItemStyleBordered
                                    target:self
                                    action:@selector(flipView:)];
@@ -105,7 +106,7 @@ static NSMutableArray *UIImageArray;
     [profileButton addTarget:self action:@selector(goCategory:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *profileButton1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [profileButton1 setTitle:@"Profile" forState:UIControlStateNormal];
+    [profileButton1 setTitle:@"Trending" forState:UIControlStateNormal];
     profileButton1.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
     [profileButton1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     profileButton1.frame = CGRectMake(175, 23, 123, 35);
@@ -138,6 +139,9 @@ static NSMutableArray *UIImageArray;
 }
 
 - (IBAction)doNothing:(UIButton *)sender {
+    TrendViewController *goTo = [[TrendViewController alloc] init];
+    [self.navigationController pushViewController:goTo animated:YES];
+
 }
 
 #pragma mark - MDCSwipeToChooseDelegate Protocol Methods

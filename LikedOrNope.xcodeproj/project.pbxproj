@@ -14,6 +14,9 @@
 		1D941A711A756BA3003BB13F /* CategoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D941A701A756BA3003BB13F /* CategoryData.m */; };
 		1D941A731A75711A003BB13F /* pic4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D941A721A75711A003BB13F /* pic4.png */; };
 		1D941A7D1A757EDC003BB13F /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D941A7C1A757EDC003BB13F /* pic1.jpg */; };
+		1D941A801A75A6DE003BB13F /* TrendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D941A7F1A75A6DE003BB13F /* TrendCell.m */; };
+		1D941A831A75A743003BB13F /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D941A821A75A743003BB13F /* TrendViewController.m */; };
+		1D941A861A75A7A7003BB13F /* TrendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D941A851A75A7A7003BB13F /* TrendData.m */; };
 		1DC624051A74B533005F1FC6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC624041A74B533005F1FC6 /* Storyboard.storyboard */; };
 		1DC624081A74B923005F1FC6 /* FirstCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC624071A74B923005F1FC6 /* FirstCategory.m */; };
 		49A483B402C049E28055919D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A6AE5BCA048DDAD2A8A49 /* libPods.a */; };
@@ -58,6 +61,12 @@
 		1D941A701A756BA3003BB13F /* CategoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryData.m; sourceTree = "<group>"; };
 		1D941A721A75711A003BB13F /* pic4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic4.png; sourceTree = "<group>"; };
 		1D941A7C1A757EDC003BB13F /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
+		1D941A7E1A75A6DE003BB13F /* TrendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendCell.h; sourceTree = "<group>"; };
+		1D941A7F1A75A6DE003BB13F /* TrendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendCell.m; sourceTree = "<group>"; };
+		1D941A811A75A743003BB13F /* TrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendViewController.h; sourceTree = "<group>"; };
+		1D941A821A75A743003BB13F /* TrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendViewController.m; sourceTree = "<group>"; };
+		1D941A841A75A7A7003BB13F /* TrendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendData.h; sourceTree = "<group>"; };
+		1D941A851A75A7A7003BB13F /* TrendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendData.m; sourceTree = "<group>"; };
 		1DC624041A74B533005F1FC6 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		1DC624061A74B923005F1FC6 /* FirstCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstCategory.h; sourceTree = "<group>"; };
 		1DC624071A74B923005F1FC6 /* FirstCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstCategory.m; sourceTree = "<group>"; };
@@ -219,6 +228,8 @@
 				D06E03971A7512C1002630B6 /* ProfileViewController.m */,
 				1D941A691A755B44003BB13F /* CategoryViewController.h */,
 				1D941A6A1A755B44003BB13F /* CategoryViewController.m */,
+				1D941A811A75A743003BB13F /* TrendViewController.h */,
+				1D941A821A75A743003BB13F /* TrendViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +241,8 @@
 				DA5B745918F239B700BB5F8E /* Person.m */,
 				1D941A6F1A756BA3003BB13F /* CategoryData.h */,
 				1D941A701A756BA3003BB13F /* CategoryData.m */,
+				1D941A841A75A7A7003BB13F /* TrendData.h */,
+				1D941A851A75A7A7003BB13F /* TrendData.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +256,8 @@
 				DA5B745E18F239B700BB5F8E /* ChoosePersonView.m */,
 				1D941A6C1A756843003BB13F /* CategoryViewCell.h */,
 				1D941A6D1A756843003BB13F /* CategoryViewCell.m */,
+				1D941A7E1A75A6DE003BB13F /* TrendCell.h */,
+				1D941A7F1A75A6DE003BB13F /* TrendCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -389,10 +404,13 @@
 				DA5B746118F239B700BB5F8E /* ImageLabelView.m in Sources */,
 				1D941A711A756BA3003BB13F /* CategoryData.m in Sources */,
 				DA5B73F918F233EF00BB5F8E /* AppDelegate.m in Sources */,
+				1D941A831A75A743003BB13F /* TrendViewController.m in Sources */,
+				1D941A801A75A6DE003BB13F /* TrendCell.m in Sources */,
 				DA5B745F18F239B700BB5F8E /* ChoosePersonViewController.m in Sources */,
 				D06E03981A7512C1002630B6 /* ProfileViewController.m in Sources */,
 				DA5B746018F239B700BB5F8E /* Person.m in Sources */,
 				DA5B73F518F233EF00BB5F8E /* main.m in Sources */,
+				1D941A861A75A7A7003BB13F /* TrendData.m in Sources */,
 				1DC624081A74B923005F1FC6 /* FirstCategory.m in Sources */,
 				1D941A6B1A755B44003BB13F /* CategoryViewController.m in Sources */,
 				1D941A6E1A756843003BB13F /* CategoryViewCell.m in Sources */,
