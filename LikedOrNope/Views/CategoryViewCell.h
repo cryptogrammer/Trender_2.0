@@ -1,5 +1,5 @@
 //
-//  UIViewController+CategoryViewController.h
+//  UITableViewCell+CategoryViewCell.h
 //  LikedOrNope
 //
 //  Created by Utkarsh Garg on 1/25/15.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoryViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CategoryViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *descriptionLabel;
-
-@property NSString *categoryName;
 
 @end

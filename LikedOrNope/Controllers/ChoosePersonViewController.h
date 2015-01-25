@@ -30,5 +30,7 @@
 @property (nonatomic, strong) Person *currentPerson;
 @property (nonatomic, strong) ChoosePersonView *frontCardView;
 @property (nonatomic, strong) ChoosePersonView *backCardView;
+- (IBAction)goCategory:(UIButton *)sender;
+- (IBAction)doNothing:(UIButton *)sender;
 
 @end

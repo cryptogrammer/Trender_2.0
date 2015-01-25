@@ -26,6 +26,7 @@
 #import "Person.h"
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 #import "ProfileViewController.h"
+#import "CategoryViewController.h"
 //#import "GlobalVars.m"
 
 static const CGFloat ChoosePersonButtonHorizontalPadding = 80.f;
@@ -55,7 +56,12 @@ static NSMutableArray *UIImageArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = false;
+    //UIImage *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pic1.jpg"]];
+    //bg.size.height = self.view.frame.size.height;
+    //UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pic1.jpg"]];
+    //[self.view addSubview:backgroundView];
+    
+    self.navigationController.navigationBarHidden = true;
     
     UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Profile"
@@ -87,21 +93,27 @@ static NSMutableArray *UIImageArray;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"Buy Now" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.6];
+    button.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
     button.frame = CGRectMake(80.0, 515.0, 160.0, 40.0);
     
     //Add Profile button
     UIButton *profileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [profileButton setImage:[UIImage imageNamed:@"profilepic.jpg"] forState:UIControlStateNormal];
-    profileButton.frame = CGRectMake(100, 10, 40, 40);
-    profileButton.clipsToBounds = YES;
-    profileButton.layer.cornerRadius = 40/2.0f;
-    profileButton.layer.borderColor=[UIColor redColor].CGColor;
-    profileButton.layer.borderWidth=2.0f;
+    [profileButton setTitle:@"Categories" forState:UIControlStateNormal];
+    profileButton.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
+    [profileButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    profileButton.frame = CGRectMake(20, 23, 125, 35);
+    [profileButton addTarget:self action:@selector(goCategory:) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *profileButton1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [profileButton1 setTitle:@"Profile" forState:UIControlStateNormal];
+    profileButton1.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
+    [profileButton1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    profileButton1.frame = CGRectMake(175, 23, 123, 35);
+    [profileButton1 addTarget:self action:@selector(doNothing:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
     [self.view addSubview:profileButton];
+    [self.view addSubview:profileButton1];
     
     //---------------------------------------------------------------------
 
@@ -118,6 +130,14 @@ static NSMutableArray *UIImageArray;
 
 - (NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (IBAction)goCategory:(UIButton *)sender {
+    CategoryViewController *goTo = [[CategoryViewController alloc] init];
+    [self.navigationController pushViewController:goTo animated:YES];
+}
+
+- (IBAction)doNothing:(UIButton *)sender {
 }
 
 #pragma mark - MDCSwipeToChooseDelegate Protocol Methods
