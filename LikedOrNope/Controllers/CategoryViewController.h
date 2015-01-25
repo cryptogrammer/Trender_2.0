@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoryViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CategoryViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
+    int selectedIndex;
+    NSArray *titleArray;
+}
 
 @property (nonatomic, strong) UILabel *descriptionLabel;
 
-@property NSString *categoryName;
 
 @end
